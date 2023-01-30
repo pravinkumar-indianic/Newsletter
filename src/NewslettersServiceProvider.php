@@ -8,6 +8,7 @@ use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Filesystem\Filesystem;
 use Indianic\Newsletter\Console\NewsletterCommand;
 
 class NewslettersServiceProvider extends ServiceProvider
