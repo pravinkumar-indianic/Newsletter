@@ -1,6 +1,7 @@
 <?php
 namespace Indianic\Newsletters\Nova\Resources;
 
+use App\Nova\Resource;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
@@ -9,7 +10,6 @@ use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\FormData;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use App\Nova\Filters\HandleScreeingOption;
 
 
 class Newsletters extends Resource {
@@ -38,14 +38,6 @@ class Newsletters extends Resource {
         'id','title', 'content', 'newsletter_option', 'date_time', 'all_user'
     ];
 
-    /**
-     * The Columns in which the screening option should be allowed.
-     *
-     * @var array
-     */
-    public static $fieldFilter = [
-        'title', 'newsletter_option', 'date_time', 'all_user'
-    ];
     
     public function fields(NovaRequest $request) {
         return [
@@ -89,9 +81,7 @@ class Newsletters extends Resource {
     }
 
     public function filters(NovaRequest $request) {
-        return [
-             new HandleScreeingOption(new static::$model, static::$fieldFilter),
-        ];
+        return [];
     }
 
     public function lenses(NovaRequest $request) {

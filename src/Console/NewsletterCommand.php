@@ -1,13 +1,13 @@
 <?php
 
-namespace Indianic\newsletter\Console;
+namespace Indianic\Newsletters\Console;
 
 use Illuminate\Console\Command;
 
 /**
  * Class NewsletterCommand
  *
- * @package Indianic\newsletter\Console
+ * @package Indianic\Newsletters\Console
  */
 class NewsletterCommand extends Command
 {

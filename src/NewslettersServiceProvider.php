@@ -1,15 +1,16 @@
 <?php
 namespace Indianic\Newsletters;
 
+
 use Indianic\Newsletters\Nova\Resources\Newsletters;
-use Indianic\Newsletters\Policies\NewslettersPolicy;
+// use Indianic\Newsletters\Policies\NewslettersPolicy;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Filesystem\Filesystem;
-use Indianic\Newsletter\Console\NewsletterCommand;
+use Indianic\Newsletters\Console\NewsletterCommand;
 
 class NewslettersServiceProvider extends ServiceProvider
 {

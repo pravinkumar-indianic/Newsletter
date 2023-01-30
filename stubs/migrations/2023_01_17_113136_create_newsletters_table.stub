@@ -15,7 +15,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('newsletters', function (Blueprint $table) {
-            $table->ulid('id')->primary();
+            $table->increments('id');
             $table->string('title')->unique();
             $table->text('content');
             $table->enum('all_user', ['On', 'Off']);
