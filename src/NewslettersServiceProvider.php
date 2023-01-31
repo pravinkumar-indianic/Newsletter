@@ -34,9 +34,8 @@ class NewslettersServiceProvider extends ServiceProvider
         });
 
         if ($this->app->runningInConsole()) {
-
-            $this->loadMigrationsFrom(base_path('vendor/indianic/cms-pages/Database/migrations'));
-            $path = 'vendor/indianic/cms-pages/Database';
+            $this->loadMigrationsFrom(base_path('vendor/indianic/newsletters/Database/migrations'));
+            $path = 'vendor/indianic/newsletters/Database';
             $migrationPath = $path."/migrations";
             if (is_dir($migrationPath)) {
                 foreach (array_diff(scandir($migrationPath, SCANDIR_SORT_NONE), [".",".."]) as $migration) {
