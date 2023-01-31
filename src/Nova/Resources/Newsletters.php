@@ -9,6 +9,7 @@ use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\FormData;
 use Laravel\Nova\Fields\DateTime;
+use Trin4ik\NovaSwitcher\NovaSwitcher;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 
@@ -72,7 +73,9 @@ class Newsletters extends Resource {
             Boolean::make('All User','all_user')
                     ->trueValue('On')
                     ->falseValue('Off')
-                    ->hideWhenUpdating()
+                    ->hideWhenUpdating(),
+                        
+            NovaSwitcher::make('Status')            
         ];
     }
 
