@@ -7,7 +7,8 @@
     },
     "authors": [
         {
-            "name": "Dipak Murtadak"
+            "name": "Dipak Murtadak",
+            "trin4ik/nova-switcher": "^0.3.0"
         }
     ],
     "require": {
