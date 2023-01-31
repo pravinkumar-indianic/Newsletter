@@ -5,7 +5,7 @@ use App\Models\Admin;
 use Illuminate\Auth\Access\HandlesAuthorization;
 use Illuminate\Auth\Access\Response;
 
-class NewslettersPolicy
+class NewsletterPolicy
 {
     use HandlesAuthorization;
 
