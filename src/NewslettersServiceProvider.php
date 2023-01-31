@@ -3,7 +3,7 @@ namespace Indianic\Newsletters;
 
 
 use Indianic\Newsletters\Nova\Resources\Newsletters;
-// use Indianic\Newsletters\Policies\NewslettersPolicy;
+// use Indianic\Newsletters\Policies\NewsletterPolicy;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\ServiceProvider;
@@ -21,7 +21,7 @@ class NewslettersServiceProvider extends ServiceProvider
     {   
         /*$this->setModulePermissions();
 
-        Gate::policy(\Indianic\Newsletters\Models\Newsletters::class, NewslettersPolicy::class);*/
+        Gate::policy(\Indianic\Newsletters\Models\Newsletters::class, NewsletterPolicy::class);*/
 
         Nova::serving(function (ServingNova $event) {
 
