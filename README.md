@@ -1,3 +1,15 @@
+News Letters
+======
 
-Step: 1: run this command
+
+Installation
+-----
+
+
+Step:- 1)
+-----
+
+```
+
 composer require indianic/newsletters
+
