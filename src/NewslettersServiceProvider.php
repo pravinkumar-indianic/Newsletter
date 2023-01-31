@@ -35,16 +35,18 @@ class NewslettersServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
 
-            tap(new Filesystem(), function ($filesystem) {
-
-                $filesystem->copy(__DIR__ .'/../stubs/migrations/2023_01_17_113136_create_newsletters_table.stub', database_path('migrations/2023_01_17_113136_create_newsletters_table.php'));
-
-            });
-
-            $this->commands([
-                NewsletterCommand::class,
-            ]);
+            $this->loadMigrationsFrom(base_path('vendor/indianic/cms-pages/Database/migrations'));
+            $path = 'vendor/indianic/cms-pages/Database';
+            $migrationPath = $path."/migrations";
+            if (is_dir($migrationPath)) {
+                foreach (array_diff(scandir($migrationPath, SCANDIR_SORT_NONE), [".",".."]) as $migration) {
+                    Artisan::call('migrate', [
+                        '--path' => $migrationPath."/".$migration
+                    ]);
+                }
+            }
         }
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
     }
 
     /**
