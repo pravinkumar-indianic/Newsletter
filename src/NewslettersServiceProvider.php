@@ -7,9 +7,7 @@ use Indianic\Newsletters\Nova\Resources\Newsletters;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Gate;
-use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Artisan;
 
 class NewslettersServiceProvider extends ServiceProvider
