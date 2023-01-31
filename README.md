@@ -2,6 +2,3 @@ Step 1: composer config repositories.newsletters vcs https://gitlab.indianic.com
 
 Step: 2: run this command
 sail composer require indianic/newsletters
-
-Step 3: run this command
-sail php artisan migrate
